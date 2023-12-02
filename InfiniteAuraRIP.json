@@ -43,19 +43,11 @@
       },
       {
             "type": "TextView",
-            "name": "Pos模式",
+            "name": "模式切换",
             "color": "#3D3D3D",
             "size": 12,
             "padding": [5, 5, 5, 5],
-            "load_script": "Pos.js"
-      },
-      {
-            "type": "TextView",
-            "name": "Motion模式",
-            "color": "#3D3D3D",
-            "size": 12,
-            "padding": [5, 5, 5, 5],
-            "load_script": "Motion.js"
+            "load_script": "Mode.js"
       },
       {
             "type": "TextView",
