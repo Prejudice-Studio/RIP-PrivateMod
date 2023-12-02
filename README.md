@@ -26,3 +26,6 @@ RIP PrivateMod
 
 2023.12.2 22:41
 创建了开源InfiniteAura交流群
+
+2023.12.3 01:10
+增加了配置界面，以便于修改ATTACK_COUNT AUTO_INTERVAL MAX_RANGE POS_Y_MAX
