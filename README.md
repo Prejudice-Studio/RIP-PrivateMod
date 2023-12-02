@@ -9,3 +9,6 @@ RIP PrivateMod
 
 2023.12.2 18:48
 增加了 Disabler 功能，修复了AutoTP的已知问题
+
+2023.12.2 19:29
+增加了 InfiniteAura开关 与 Disabler 的悬浮窗
