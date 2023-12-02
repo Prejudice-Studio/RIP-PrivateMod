@@ -50,6 +50,35 @@
             "load_script": "Mode.js"
       },
       {
+            "type":"TextView",
+            "name":"Disabler提示",
+            "color":"#3D3D3D"
+            "size": 12,
+            "padding": [5, 5, 5. 5],
+            "load_script": "DisablerTip.js"
+      },
+      {
+            "type": "Switch",
+            "name": "Disabler",
+            "color": "#7B68EE",
+            "size": 10,
+            "padding": [5, 5, 5, 5],
+            "tag": "fun_multiple_packet",
+            "items": [
+               {
+                   "type": "SeekBar",
+                   "key": "count",
+                   "format": "数量 %d",
+                   "color": "#63bbd0",
+                   "size": 8,
+                   "padding": [0, 0, 0, 0],
+                   "value": 5,
+                   "min": 1,
+                   "max": 10
+               }
+              ]
+      },
+      {
             "type": "TextView",
             "name": "退出脚本",
             "color": "#3D3D3D",
