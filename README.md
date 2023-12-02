@@ -15,7 +15,6 @@ RIP PrivateMod
 
 2023.12.2 19:45
 修复已知问题
-预告：12.5日前会进行整体重构，简化代码，优化加载速度
 
 2023.12.2 20:31
 重构完成，使用 run_command 替代了 load_script ，加快了加载速度，缩小了体积
@@ -29,3 +28,6 @@ RIP PrivateMod
 
 2023.12.3 01:10
 增加了配置界面，以便于修改ATTACK_COUNT AUTO_INTERVAL MAX_RANGE POS_Y_MAX
+
+2023.12.3 03:09
+新增 智能队友依赖项 ，以修复智能队友无效问题
