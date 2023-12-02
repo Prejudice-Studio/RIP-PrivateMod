@@ -23,14 +23,14 @@
             "color": "#3D3D3D",
             "size": 12,
             "padding": [5, 5, 5, 5],
-            "load_script": "MainIA.js",
+            "run_command": "/InfiniteAura Attack",
             "shortcut": {
                 "type": "CheckedButton",
                 "params": [65, 65],
                 "no_circle": true,
                 "off": "InfiniteAuraRIP_Off.png",
                 "on": "InfiniteAuraRIP_On.png",
-                "icon": "InfiniteAuraRIP_Off.png"
+                "icon": "InfiniteAuraRIP_On.png"
             }
         },
         {
@@ -39,7 +39,7 @@
             "color": "#3D3D3D",
             "size": 12,
             "padding": [5, 5, 5, 5],
-            "load_script": "AutoTP.js"
+            "run_command": "/InfiniteAura AutoMode"
         },
         {
             "type": "TextView",
@@ -47,7 +47,7 @@
             "color": "#3D3D3D",
             "size": 12,
             "padding": [5, 5, 5, 5],
-            "load_script": "Teams.js"
+            "run_command": "/InfiniteAura Team"
         },
         {
             "type": "TextView",
@@ -55,7 +55,7 @@
             "color": "#3D3D3D",
             "size": 12,
             "padding": [5, 5, 5, 5],
-            "load_script": "Mode.js"
+            "run_command": "/InfiniteAura MOVEMode"
         },
         {
             "type": "TextView",
@@ -78,7 +78,7 @@
                 "no_circle": true,
                 "off": "InfiniteAuraRIP_DisOff.png",
                 "on": "InfiniteAuraRIP_DisOn.png",
-                "icon": "InfiniteAuraRIP_DisOff.png"
+                "icon": "InfiniteAuraRIP_DisOn.png"
             },
             "items": [
                 {
@@ -100,7 +100,7 @@
             "color": "#3D3D3D",
             "size": 12,
             "padding": [5, 5, 5, 5],
-            "load_script": "exit.js"
+            "run_command": "/InfiniteAura exit"
         }
     ]
 }
