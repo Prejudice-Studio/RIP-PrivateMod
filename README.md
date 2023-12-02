@@ -18,7 +18,6 @@ RIP PrivateMod
 
 2023.12.2 20:31
 重构完成，使用 run_command 替代了 load_script ，加快了加载速度，缩小了体积
-仅InfiniteAura - command.js与DisablerTip.js文件为有效文件
 
 2023.12.2 21:15
 修复悬浮窗无效问题及其他已知问题，更换了InfiniteAura悬浮窗图片文件
