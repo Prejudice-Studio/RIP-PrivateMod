@@ -51,8 +51,6 @@
         },
         {
             "type": "Switch",
-            "on_sound": "on.mp3",
-            "off_sound": "off.mp3",
             "name": "智能队友依赖项\n请开启智能队友前打开",
             "color": "#7B68EE",
             "size": 10,
