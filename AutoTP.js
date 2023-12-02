@@ -1,1 +1,1 @@
-executeCommand("/InfiniteAura Automode")
+executeCommand("/InfiniteAura AutoMode")
