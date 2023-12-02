@@ -23,3 +23,6 @@ RIP PrivateMod
 
 2023.12.2 21:15
 修复悬浮窗无效问题及其他已知问题，更换了InfiniteAura悬浮窗图片文件
+
+2023.12.2 22:41
+创建了开源InfiniteAura交流群
