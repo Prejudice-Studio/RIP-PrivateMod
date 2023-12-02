@@ -1,1 +1,0 @@
-executeCommand("/InfiniteAura AutoMode")
