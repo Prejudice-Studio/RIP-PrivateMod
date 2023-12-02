@@ -9,66 +9,63 @@
     "can_close": true,
     "hide": true,
     "items": [
-      {
+        {
             "type": "TextView",
             "name": "加载InfiniteAura",
             "color": "#3D3D3D",
             "size": 12,
             "padding": [5, 5, 5, 5],
             "load_script": "InfiniteAura - command.js"
-      },
-      {
+        },
+        {
             "type": "TextView",
             "name": "开关InfiniteAura",
             "color": "#3D3D3D",
             "size": 12,
             "padding": [5, 5, 5, 5],
-            "load_script": "MainIA.js"
+            "load_script": "MainIA.js",
             "shortcut": {
-                        "type": "CheckedButton",
-                        "params": [
-                            65,
-                            65
-                        ],
-                        "no_circle": true,
-                        "off": "InfiniteAuraRIP_Off.png",
-                        "on": "InfiniteAuraRIP_On.png",
-                        "icon": "InfiniteAuraRIP_Off.png"
-                    }
-      },
-      {
+                "type": "CheckedButton",
+                "params": [65, 65],
+                "no_circle": true,
+                "off": "InfiniteAuraRIP_Off.png",
+                "on": "InfiniteAuraRIP_On.png",
+                "icon": "InfiniteAuraRIP_Off.png"
+            }
+        },
+        {
             "type": "TextView",
             "name": "开关自动模式",
             "color": "#3D3D3D",
             "size": 12,
             "padding": [5, 5, 5, 5],
             "load_script": "AutoTP.js"
-      },
-      {
+        },
+        {
             "type": "TextView",
             "name": "开关智能队友",
             "color": "#3D3D3D",
             "size": 12,
             "padding": [5, 5, 5, 5],
             "load_script": "Teams.js"
-      },
-      {
+        },
+        {
             "type": "TextView",
             "name": "模式切换",
             "color": "#3D3D3D",
             "size": 12,
             "padding": [5, 5, 5, 5],
             "load_script": "Mode.js"
-      },
-      {
-            "type":"TextView",
-            "name":"Disabler提示",
-            "color":"#3D3D3D"
+        },
+        {
+            "type": "TextView",
+            "name": "Disabler提示",
+            "color": "#3D3D3D",
             "size": 12,
-            "padding": [5, 5, 5. 5],
+            "padding": [5, 5, 5, 5],
             "load_script": "DisablerTip.js"
-      },
-      {
+        },
+        {
             "type": "Switch",
             "name": "Disabler",
             "color": "#7B68EE",
@@ -76,37 +73,34 @@
             "padding": [5, 5, 5, 5],
             "tag": "fun_multiple_packet",
             "shortcut": {
-                        "type": "CheckedButton",
-                        "params": [
-                            65,
-                            65
-                        ],
-                        "no_circle": true,
-                        "off": "InfiniteAuraRIP_DisOff.png",
-                        "on": "InfiniteAuraRIP_DisOn.png",
-                        "icon": "InfiniteAuraRIP_DisOff.png"
-                    },
+                "type": "CheckedButton",
+                "params": [65, 65],
+                "no_circle": true,
+                "off": "InfiniteAuraRIP_DisOff.png",
+                "on": "InfiniteAuraRIP_DisOn.png",
+                "icon": "InfiniteAuraRIP_DisOff.png"
+            },
             "items": [
-               {
-                   "type": "SeekBar",
-                   "key": "count",
-                   "format": "数量 %d",
-                   "color": "#63bbd0",
-                   "size": 8,
-                   "padding": [0, 0, 0, 0],
-                   "value": 5,
-                   "min": 1,
-                   "max": 10
-               }
-              ]
-      },
-      {
+                {
+                    "type": "SeekBar",
+                    "key": "count",
+                    "format": "数量 %d",
+                    "color": "#63bbd0",
+                    "size": 8,
+                    "padding": [0, 0, 0, 0],
+                    "value": 5,
+                    "min": 1,
+                    "max": 10
+                }
+            ]
+        },
+        {
             "type": "TextView",
             "name": "退出脚本",
             "color": "#3D3D3D",
             "size": 12,
             "padding": [5, 5, 5, 5],
             "load_script": "exit.js"
-      }
+        }
     ]
 }
