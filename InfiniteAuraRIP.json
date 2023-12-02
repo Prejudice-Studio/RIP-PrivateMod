@@ -50,6 +50,16 @@
             "run_command": "/InfiniteAura AutoMode"
         },
         {
+            "type": "Switch",
+            "on_sound": "on.mp3",
+            "off_sound": "off.mp3",
+            "name": "智能队友依赖项\n请开启智能队友前打开",
+            "color": "#7B68EE",
+            "size": 10,
+            "padding": [5, 5, 5, 5],
+            "tag": "fun_smart_team"
+        },
+        {
             "type": "TextView",
             "name": "开关智能队友",
             "color": "#3D3D3D",
