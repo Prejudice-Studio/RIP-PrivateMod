@@ -1,3 +1,10 @@
+//InfiniteAuraRIP
+//开源项目地址： https://github.com/MoYuanCN/RIP-PrivateMod/
+//UI作者：MoYuanCN   QQ：1520349207
+//本开源项目使用LGPL 3.0协议
+//允许进行二次创作并分发，但是分发内容必须遵循上述开源协议与InfiniteAuraRIP二次创作流程
+//二次创作请勿删除注释
+
 {
     "type": "Menu",
     "title": "InfiniteAuraRIP",
@@ -37,7 +44,7 @@
             "color": "#3D3D3D",
             "size": 12,
             "padding": [5, 5, 5, 5],
-            "load_script": "setting.js"
+            "send_message": "set"
         },
         {
             "type": "TextView",
