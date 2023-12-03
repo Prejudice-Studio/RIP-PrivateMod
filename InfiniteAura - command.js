@@ -13,7 +13,9 @@ let target = null; //攻击目标唯一数字ID
 let attackCount = 0; //剩余攻击次数
 let mode = true; //控制传送模式，默认Pos
 let tick = 0;
-let 显示信息 = true // 设置默认值为 true（开启）
+let features = { // 功能开关
+  显示信息: true // 设置默认值为 true（开启）
+}
 
 const setPos = p => setEntityPos(LOCAL_PLAYER_ID, p.x, p.y, p.z);
 const setMotion = m => setEntityMotion(LOCAL_PLAYER_ID, m.x, m.y, m.z);
@@ -97,12 +99,15 @@ function onTickEvent() {
     }
 }
 
-if (显示信息 && target_list.length > 0)  {
-        var health = getEntityAttribute(target, 4);
-        var distance = get_distance_id(self_id, target);
-        var name = getEntityName(target);
-        var item = getEntityCarriedItem(target);
-        showTipMessage("§9[InfiniteAuraRIP] §7>>>"+"\n§f正在攻击 §7>>>§e" + name + "\n§f攻击距离 §7>>>§d" + distance + "\n§f手中物品 §7>>>§b" + item + "\n当前血量 §7>>>§c" + health);
+if (features.显示信息) {
+    if (typeof target === "string" && target !== null && tab(getEntityPos(mid), getEntityPos(target)) <= range) {
+        var health = getEntityAttribute(mid, 4);
+        var current = health.current;
+        var max = health.max;
+        var NameTag = getEntityName(target);
+        var AttackSpeed = getEntityAttribute(meid, 110).current;
+        var damage = getEntityAttribute(mid, 5);
+        showTipMessage("§9[InfiniteAuraRIP] §7>>>"+"\n§f正在攻击 §7>>>§e" + NameTag + "\n§f攻击伤害 §7>>>§d" + damage + "\n§f当前攻速 §7>>>§b" + AttackSpeed + "\n当前血量 §7>>>§c" + current);
     }
 }
 
