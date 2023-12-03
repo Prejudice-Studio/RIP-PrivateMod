@@ -95,6 +95,22 @@
         },
         {
             "type": "TextView",
+            "name": "开启信息显示",
+            "color": "#3D3D3D",
+            "size": 12,
+            "padding": [5, 5, 5, 5],
+            "run_command": "/信息开"
+        },      
+        {
+            "type": "TextView",
+            "name": "关闭信息显示",
+            "color": "#3D3D3D",
+            "size": 12,
+            "padding": [5, 5, 5, 5],
+            "run_command": "/信息关"
+        },
+        {
+            "type": "TextView",
             "name": "Disabler提示",
             "color": "#3D3D3D",
             "size": 12,
