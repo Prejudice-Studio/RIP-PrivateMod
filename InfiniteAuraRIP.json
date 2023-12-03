@@ -36,9 +36,8 @@
                 "type": "CheckedButton",
                 "params": [65, 65],
                 "no_circle": true,
-                "off": "InfiniteAuraRIP_Off.png",
-                "on": "InfiniteAuraRIP_On.png",
-                "icon": "InfiniteAuraRIP_On.png"
+                "run_command": "/InfiniteAura Attack",
+                "icon": "InfiniteAuraRIP.png"
             }
         },
         {
