@@ -8,32 +8,50 @@
 {
     "type": "Menu",
     "title": "InfiniteAuraRIP",
-    "title_bg_color": "#B6D6F2",
-    "title_start_color": "#00BFFF",
-    "title_end_color": "#8A2BE2",
+    "title_bg_color": "#F5DEB3",
+    "title_start_color": "#D2691E",
+    "title_end_color": "#D2691E",
     "color": "#FFFFFF",
     "alpha": 0.9,
     "can_close": true,
     "hide": true,
+    "close_icon": "ic_close.png",
     "items": [
         {
             "type": "TextView",
-            "name": "项目地址\ngithub.com/MoYuanCN/RIP-PrivateMod/",
-            "color": "#3D3D3D",
+            "html": "<a href=''>项目地址</a>",
+            "url": "https://github.com/MoYuanCN/RIP-PrivateMod/",
             "size": 12,
-            "padding": [5, 5, 5, 5]
+            "padding": [
+                10,
+                5,
+                10,
+                5
+            ]
         },
         {
             "type": "TextView",
-            "name": "UI原作者：MoYuanCN&LunarHax",
-            "color": "#3D3D3D",
+            "html": "<a href=''>一键加群</a>",
+            "url": "http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=D8uXNt2y4yAdzkeJv7JULQznTwmVmBSR&authKey=B8Ln3cX5T%2B2rwn%2B62f06pRiLCa6%2FtniURTdhdbWbtXw6hAMAhUedm3igitkFMb6y&noverify=0&group_code=756434157",
+            "size": 12,
+            "padding": [
+                10,
+                5,
+                10,
+                5
+            ]
+        },
+        {
+            "type": "TextView",
+            "name": "UI原作者：MoYuanCN\n协作者：LunarHax",
+            "color": "#BC8F8F",
             "size": 12,
             "padding": [5, 5, 5, 5]
         },
         {
             "type": "TextView",
             "name": "加载InfiniteAura",
-            "color": "#3D3D3D",
+            "color": "#BC8F8F",
             "size": 12,
             "padding": [5, 5, 5, 5],
             "load_script": "InfiniteAura - command.js"
@@ -41,7 +59,7 @@
         {
             "type": "TextView",
             "name": "打开配置界面\n请确保已加载Js",
-            "color": "#3D3D3D",
+            "color": "#BC8F8F",
             "size": 12,
             "padding": [5, 5, 5, 5],
             "send_message": "set"
@@ -49,7 +67,7 @@
         {
             "type": "TextView",
             "name": "开关InfiniteAura",
-            "color": "#3D3D3D",
+            "color": "#BC8F8F",
             "size": 12,
             "padding": [5, 5, 5, 5],
             "run_command": "/InfiniteAura Attack",
@@ -64,7 +82,7 @@
         {
             "type": "TextView",
             "name": "开关自动模式",
-            "color": "#3D3D3D",
+            "color": "#BC8F8F",
             "size": 12,
             "padding": [5, 5, 5, 5],
             "run_command": "/InfiniteAura AutoMode"
@@ -72,7 +90,7 @@
         {
             "type": "Switch",
             "name": "智能队友依赖项\n请开启智能队友前打开",
-            "color": "#7B68EE",
+            "color": "#BC8F8F",
             "size": 10,
             "padding": [5, 5, 5, 5],
             "tag": "fun_smart_team"
@@ -80,7 +98,7 @@
         {
             "type": "TextView",
             "name": "开关智能队友",
-            "color": "#3D3D3D",
+            "color": "#BC8F8F",
             "size": 12,
             "padding": [5, 5, 5, 5],
             "run_command": "/InfiniteAura Team"
@@ -88,7 +106,7 @@
         {
             "type": "TextView",
             "name": "模式切换",
-            "color": "#3D3D3D",
+            "color": "#BC8F8F",
             "size": 12,
             "padding": [5, 5, 5, 5],
             "run_command": "/InfiniteAura MOVEMode"
@@ -96,7 +114,7 @@
         {
             "type": "TextView",
             "name": "开启信息显示",
-            "color": "#3D3D3D",
+            "color": "#BC8F8F",
             "size": 12,
             "padding": [5, 5, 5, 5],
             "run_command": "/信息开"
@@ -104,7 +122,7 @@
         {
             "type": "TextView",
             "name": "关闭信息显示",
-            "color": "#3D3D3D",
+            "color": "#BC8F8F",
             "size": 12,
             "padding": [5, 5, 5, 5],
             "run_command": "/信息关"
@@ -112,7 +130,7 @@
         {
             "type": "TextView",
             "name": "Disabler提示",
-            "color": "#3D3D3D",
+            "color": "#BC8F8F",
             "size": 12,
             "padding": [5, 5, 5, 5],
             "load_script": "DisablerTip.js"
@@ -120,7 +138,7 @@
         {
             "type": "Switch",
             "name": "Disabler",
-            "color": "#7B68EE",
+            "color": "#BC8F8F",
             "size": 10,
             "padding": [5, 5, 5, 5],
             "tag": "fun_multiple_packet",
@@ -137,7 +155,7 @@
                     "type": "SeekBar",
                     "key": "count",
                     "format": "数量 %d",
-                    "color": "#63bbd0",
+                    "color": "#BC8F8F",
                     "size": 8,
                     "padding": [0, 0, 0, 0],
                     "value": 5,
@@ -149,7 +167,7 @@
         {
             "type": "TextView",
             "name": "设置当前高度为\n最高高度",
-            "color": "#3D3D3D",
+            "color": "#BC8F8F",
             "size": 12,
             "padding": [5, 5, 5, 5],
             "run_command": "/InfiniteAura Set_Y_MAX"
@@ -157,7 +175,7 @@
         {
             "type": "TextView",
             "name": "退出脚本",
-            "color": "#3D3D3D",
+            "color": "#BC8F8F",
             "size": 12,
             "padding": [5, 5, 5, 5],
             "run_command": "/InfiniteAura exit"
