@@ -44,4 +44,4 @@ RIP PrivateMod
 将setting.js集成进InfiniteAura - command.js
 在Js中将UI原作者与项目地址标注，上传了InfiniteAuraRIP二次创作流程
 修改了InfiniteAuraRIP.json，标注了UI原作者与项目地址，修改配置界面的运行方式
-增加了特别感谢名单，修改了DisablerTip
+增加了特别感谢名单，修改了DisablerTip.js
