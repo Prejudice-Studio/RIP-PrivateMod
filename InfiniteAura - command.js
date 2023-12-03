@@ -193,6 +193,6 @@ function onExecuteCommandEvent(command) {
 
 clientMessage('§lRunAway > Load InfiniteAuraRIP §b✔');
 clientMessage('§r§l 开源InfiniteAura(InfiniteAuraRIP) + 群聊756434157');
-clientMessage('§r§l UI原作者：github.com/MoYuanCN QQ：1520349207 Email:MoYuanCN@gmail.com\n       LunarHax Email：LunarHaxUI@outlook.com')
+clientMessage('§r§l UI原作者：github.com/MoYuanCN QQ：1520349207 Email:MoYuanCN@gmail.com\n       LunarHax QQ：3588843609 Email：LunarHaxUI@outlook.com')
 clientMessage('§r§l 项目地址：https://github.com/MoYuanCN/RIP-PrivateMod/')
 clientMessage('§r§l 特别感谢:\nXxxGBRCxxX QQ：2938846249\n烟域 QQ：3595643051\n落日终归山海 QQ：2981864058\nAoux QQ：3511283331\nEcho QQ：1546348649\nCoe QQ：532998493\n墨影 QQ：3658044685')
