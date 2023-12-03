@@ -48,3 +48,6 @@ RIP PrivateMod
 
 2023.12.3 23:02
 修复了UI的已知问题，增加一名仓库维护者
+
+2023.12.3 23:10
+InfiniteAura - command.js中加入了攻击显示并修改了己知的问题
