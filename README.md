@@ -57,3 +57,6 @@ InfiniteAura - command.js - 中加入了攻击显示并修改了己知的问题
 
 2023.12.4 1:43
 修复了己知优化了InfiniteAura - command.js并把setting.js和InfiniteAura - command.js合并到了InfiniteAura - command.js里
+
+2023.12.4 2:06
+多次尝试修复信息显示，无果，仍在尝试
