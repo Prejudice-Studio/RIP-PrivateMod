@@ -4,21 +4,19 @@ let MAX_RANGE = 500; //最远范围
 let ATTACK_COUNT = 3; //攻击和点击次数
 let AUTO_INTERVAL = 15; //自动传送间隔
 
-//以下用于控制开关或记录数据(上方用于默认调参)
-let AutoMode = false; //自动手动切换,默认为手动
-let Team = false; //智能队友开关,默认关闭
-let autotp = false; //是否自动tp,默认为不
+let AutoMode = false; //自动手动切换，默认为手动
+let Team = false; //智能队友开关，默认关闭
+let autotp = false; //是否自动tp，默认为不
 let backPos = null; //自动返回记录的坐标
 let backMotion = null; //自动返回所记录的移动值
 let target = null; //攻击目标唯一数字ID
 let attackCount = 0; //剩余攻击次数
-let mode = true; //控制传送模式,默认Pos
+let mode = true; //控制传送模式，默认Pos
 let tick = 0;
 let features = { // 功能开关
   显示信息: true // 设置默认值为 true（开启）
 }
 
-//一些代码的封装
 const setPos = p => setEntityPos(LOCAL_PLAYER_ID, p.x, p.y, p.z);
 const setMotion = m => setEntityMotion(LOCAL_PLAYER_ID, m.x, m.y, m.z);
 const getPos = () => getEntityPos(LOCAL_PLAYER_ID);
@@ -28,7 +26,6 @@ const click = p => buildBlock(LOCAL_PLAYER_ID, p.x, p.y, p.z, 0);
 const COLLISION_X_MIN = 0.1; //最低X碰撞箱
 const COLLISION_Y_MIN = 0.1; //最低Y碰撞箱
 
-//寻找目标
 function attack() {
     const localPlayerPos = getPos(); //获取自身坐标,用于和其他玩家的坐标进行对比
     let minRange = MAX_RANGE; //最近一个玩家和自身的距离
@@ -44,7 +41,7 @@ function attack() {
             target = id;
         }
     }
-    if (target) { //如果寻找到到目标
+    if (target) { //如果寻找到目标
         attackCount = ATTACK_COUNT; //设置攻击次数
         backPos = localPlayerPos; //记录坐标
         backMotion = getMotion(); //记录移动值
@@ -101,16 +98,16 @@ function onTickEvent() {
         }
     }
 }
-    if (features.显示信息) { // 若有开启显示信息，则显示实体信息
-        if (typeof target === "string" && target !== null && tab(getEntityPos(mid), getEntityPos(target)) <= range)) {
-            var health = getEntityAttribute(mid, 4);
-            var current = health.current;
-            var max = health.max;
-            var NameTag = getEntityName(target);
-            var AttackSpeed = getEntityAttribute(meid, 110).current;
-            var damage = getEntityAttribute(mid, 5);
-            showTipMessage("§9[InfiniteAuraRIP] §7>>>"+"\n§f正在攻击 §7>>>§e" + NameTag + "\n§f攻击伤害 §7>>>§d" + damage + "\n§f当前攻速 §7>>>§b" + AttackSpeed + "\n当前血量 §7>>>§c" + current);
-        }
+
+if (features.显示信息) {
+    if (typeof target === "string" && target !== null && tab(getEntityPos(mid), getEntityPos(target)) <= range) {
+        var health = getEntityAttribute(mid, 4);
+        var current = health.current;
+        var max = health.max;
+        var NameTag = getEntityName(target);
+        var AttackSpeed = getEntityAttribute(meid, 110).current;
+        var damage = getEntityAttribute(mid, 5);
+        showTipMessage("§9[InfiniteAuraRIP] §7>>>"+"\n§f正在攻击 §7>>>§e" + NameTag + "\n§f攻击伤害 §7>>>§d" + damage + "\n§f当前攻速 §7>>>§b" + AttackSpeed + "\n当前血量 §7>>>§c" + current);
     }
 }
 
@@ -121,14 +118,14 @@ function onExecuteCommandEvent(command) {
             while (attackCount--) back();
             exit();
             break;
-            case'/信息开'
-    features.显示信息 = true;
-    clientMessage('§l§d[InfiniteAuraRIP]§r§8>>>§r§e 信息显示 §a已启用');
-              break;
-        case'/信息关'
-    features.显示信息 = false;
-    clientMessage('§l§d[InfiniteAuraRIP]§r§8>>>§r§e 信息显示 §c已禁用');
-        break;
+        case '/信息开':
+            features.显示信息 = true;
+            clientMessage('§l§d[InfiniteAuraRIP]§r§8>>>§r§e 信息显示 §a已启用');
+            break;
+        case '/信息关':
+            features.显示信息 = false;
+            clientMessage('§l§d[InfiniteAuraRIP]§r§8>>>§r§e 信息显示 §c已禁用');
+            break;
         case '/InfiniteAura Set_Y_MAX':
             let pos = getEntityPos(LOCAL_PLAYER_ID);
             let Y = Math.ceil(pos.y) - 1;
@@ -153,7 +150,7 @@ function onExecuteCommandEvent(command) {
         case '/InfiniteAura Attack':
             if (AutoMode) {
                 autotp = !autotp;
-                if (autotp) clientMessage('§lRunAway >> §7InfiniteAuraRIP — Enabled §b✔')
+                if (autotp) clientMessage('§lRunAway >> §7InfiniteAuraRIP — Enabled §b✔');
                 else clientMessage('§lRunAway >> §7InfiniteAuraRIP — Disabled §c✘');
             } else {
                 if (!attackCount) attack();
@@ -222,21 +219,21 @@ function InfiniteAuraSetting() {
     }
     `;
     addForm(custom_form, function (...args) {
-        executeCommand("/Set ATTACK_COUNT" + args[0]),executeCommand("/Set MAX_RANGE " + args[1]),executeCommand("/Set AUTO_INTERVAL " + args[2]),executeCommand("/Set POS_Y_MAX " + args[3])
-        clientMessage("攻击次数为" + args[0] , "最大攻击距离为" + args[1] , "自动攻击间隔为" + args[2] , "Pos模式最高Y坐标为" + args[3] ,  "设置完毕")
-    })
+        executeCommand("/Set ATTACK_COUNT " + args[0]), executeCommand("/Set MAX_RANGE " + args[1]), executeCommand("/Set AUTO_INTERVAL " + args[2]), executeCommand("/Set POS_Y_MAX " + args[3]);
+        clientMessage("攻击次数为" + args[0], "最大攻击距离为" + args[1], "自动攻击间隔为" + args[2], "Pos模式最高Y坐标为" + args[3], "设置完毕");
+    });
 }
 
 function onSendChatMessageEvent(message) {
     if (message.toLowerCase() === 'set') {
         InfiniteAuraSetting();
-        return true;  // 阻止消息继续传递
-    }  else 
-        return false;  // 允许消息传递
+        return true; // 阻止消息继续传递
+    } else
+        return false; // 允许消息传递
 }
 
 clientMessage('§lRunAway > Load InfiniteAuraRIP §b✔');
 clientMessage('§r§l 开源InfiniteAura(InfiniteAuraRIP) + 群聊756434157');
-clientMessage('§r§l UI原作者：github.com/MoYuanCN QQ：1520349207 Email:MoYuanCN@gmail.com\n       LunarHax QQ：3588843609 Email：LunarHaxUI@outlook.com')
-clientMessage('§r§l 项目地址：https://github.com/MoYuanCN/RIP-PrivateMod/')
-clientMessage('§r§l 特别感谢:\nXxxGBRCxxX QQ：2938846249\n烟域 QQ：3595643051\n落日终归山海 QQ：2981864058\nAoux QQ：3511283331\nEcho QQ：1546348649\nCoe QQ：532998493\n墨影 QQ：3658044685')
+clientMessage('§r§l UI原作者：github.com/MoYuanCN QQ：1520349207 Email:MoYuanCN@gmail.com\n          LunarHax QQ：3588843609 Email：LunarHaxUI@outlook.com');
+clientMessage('§r§l 项目地址：https://github.com/MoYuanCN/RIP-PrivateMod/');
+clientMessage('§r§l 特别感谢:\nXxxGBRCxxX QQ：2938846249\n烟域 QQ：3595643051\n落日终归山海 QQ：2981864058\nAoux QQ：3511283331\nEcho QQ：1546348649\nCoe QQ：532998493\n墨影 QQ：3658044685');
