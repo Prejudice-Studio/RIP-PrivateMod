@@ -50,7 +50,10 @@ RIP PrivateMod
 修复了UI的已知问题，增加一名仓库维护者
 
 2023.12.3 23:10
-InfiniteAura - command.js中加入了攻击显示并修改了己知的问题
+InfiniteAura - command.js - 中加入了攻击显示并修改了己知的问题
 
 2023.12.4 00:05
 修改了InfiniteAuraRIP.json，加入信息显示开关，修复已知问题
+
+2023.12.4 1:43
+修复了己知优化了InfiniteAura - command.js并把setting.js和InfiniteAura - command.js合并到了InfiniteAura - command.js里
