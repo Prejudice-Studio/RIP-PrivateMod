@@ -46,7 +46,7 @@ function attack() {
         backPos = localPlayerPos; //记录坐标
         backMotion = getMotion(); //记录移动值
         teleport(); //传送至目标
-    } else clientMessage('§lRunAway >> §rInfiniteAura : §b没有合适的目标');
+    } else clientMessage('§lRunAway >> §rInfiniteAuraRIP : §b没有合适的目标');
 }
 
 function teleport() { //计算偏移并且通过移动值传送到目标位置
@@ -102,7 +102,7 @@ function onTickEvent() {
 function onExecuteCommandEvent(command) {
     switch (command) {
         case '/InfiniteAura exit':
-            clientMessage('§lRunAway > Exit InfiniteAura §c✘');
+            clientMessage('§lRunAway > Exit InfiniteAuraRIP §c✘');
             while (attackCount--) back();
             exit();
             break;
@@ -110,31 +110,31 @@ function onExecuteCommandEvent(command) {
             let pos = getEntityPos(LOCAL_PLAYER_ID);
             let Y = Math.ceil(pos.y) - 1;
             POS_Y_MAX = Y;
-            clientMessage('§lRunAway >> §rInfiniteAura : §b已将MAX_Y设置为' + Y);
+            clientMessage('§lRunAway >> §rInfiniteAuraRIP : §b已将MAX_Y设置为' + Y);
             break;
         case '/InfiniteAura Team':
             Team = !Team;
-            if (Team) clientMessage('§lRunAway >> §rInfiniteAura : §eTeam §b✔');
-            else clientMessage('§lRunAway >> §rInfiniteAura : §eTeam §c✘');
+            if (Team) clientMessage('§lRunAway >> §rInfiniteAuraRIP : §eTeam §b✔');
+            else clientMessage('§lRunAway >> §rInfiniteAuraRIP : §eTeam §c✘');
             break;
         case '/InfiniteAura MOVEMode':
             mode = !mode;
-            if (mode) clientMessage('§lRunAway >> §rInfiniteAura : Mode-§bPos');
-            else clientMessage('§lRunAway >> §rInfiniteAura : Mode-§eMotion');
+            if (mode) clientMessage('§lRunAway >> §rInfiniteAuraRIP : Mode-§bPos');
+            else clientMessage('§lRunAway >> §rInfiniteAuraRIP : Mode-§eMotion');
             break;
         case '/InfiniteAura AutoMode':
             AutoMode = !AutoMode;
-            if (AutoMode) clientMessage('§lRunAway >> §rInfiniteAura : §eAutoTp §b✔');
-            else clientMessage('§lRunAway >> §rInfiniteAura : §eAutoTp §c✘');
+            if (AutoMode) clientMessage('§lRunAway >> §rInfiniteAuraRIP : §eAutoTp §b✔');
+            else clientMessage('§lRunAway >> §rInfiniteAuraRIP : §eAutoTp §c✘');
             break;
         case '/InfiniteAura Attack':
             if (AutoMode) {
                 autotp = !autotp;
-                if (autotp) clientMessage('§lRunAway >> §7InfiniteAura — Enabled §b✔')
-                else clientMessage('§lRunAway >> §7InfiniteAura — Disabled §c✘');
+                if (autotp) clientMessage('§lRunAway >> §7InfiniteAuraRIP — Enabled §b✔')
+                else clientMessage('§lRunAway >> §7InfiniteAuraRIP — Disabled §c✘');
             } else {
                 if (!attackCount) attack();
-                else clientMessage('§lRunAway >> §rInfiniteAura : §b操作过快');
+                else clientMessage('§lRunAway >> §rInfiniteAuraRIP : §b操作过快');
             }
             break;
         default:
@@ -146,19 +146,19 @@ function onExecuteCommandEvent(command) {
                     const value = parseInt(match[2]);
                     if (option === "ATTACK_COUNT") {
                         ATTACK_COUNT = value;
-                        clientMessage('§lRunAway >> §rInfiniteAura : §b已将ATTACK_COUNT设置为' + value);
+                        clientMessage('§lRunAway >> §rInfiniteAuraRIP : §b已将ATTACK_COUNT设置为' + value);
                     }
                     if (option === "MAX_RANGE") {
                         MAX_RANGE = value;
-                        clientMessage('§lRunAway >> §rInfiniteAura : §b已将MAX_RANGE设置为' + value);
+                        clientMessage('§lRunAway >> §rInfiniteAuraRIP : §b已将MAX_RANGE设置为' + value);
                     }
                     if (option === "POS_Y_MAX") {
                         POS_Y_MAX = value;
-                        clientMessage('§lRunAway >> §rInfiniteAura : §b已将POS_Y_MAX设置为' + value);
+                        clientMessage('§lRunAway >> §rInfiniteAuraRIP : §b已将POS_Y_MAX设置为' + value);
                     }
                     if (option === "AUTO_INTERVAL") {
                         AUTO_INTERVAL = value;
-                        clientMessage('§lRunAway >> §rInfiniteAura : §b已将AUTO_INTERVAL设置为' + value);
+                        clientMessage('§lRunAway >> §rInfiniteAuraRIP : §b已将AUTO_INTERVAL设置为' + value);
                     }
                 }
                 return true;
@@ -168,4 +168,5 @@ function onExecuteCommandEvent(command) {
     return true;
 }
 
-clientMessage('§lRunAway > Load InfiniteAura §b✔');
+clientMessage('§lRunAway > Load InfiniteAuraRIP §b✔');
+clientMessage('§r§l 开源InfiniteAura(InfiniteAuraRIP)交流群 + 群聊756434157');
