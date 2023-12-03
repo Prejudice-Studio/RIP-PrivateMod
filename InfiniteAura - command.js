@@ -99,13 +99,12 @@ function onTickEvent() {
     }
 }
 
-if (features.显示信息) {
-   if (record_target && target_list.length > 0)  {
-        var health = getEntityAttribute(target, 4)
+if (features.显示信息 && target_list.length > 0)  {
+        var health = getEntityAttribute(target, 4);
         var distance = get_distance_id(self_id, target);
         var name = getEntityName(target);
-        var item = getEntityCarriedItem(target)
-        showTipMessage("§9[InfiniteAuraRIP] §7>>>"+"\n§f正在攻击 §7>>>§e" + Name + "\n§f攻击距离 §7>>>§d" + distance + "\n§f手中物品 §7>>>§b" + item + "\n当前血量 §7>>>§c" + health);
+        var item = getEntityCarriedItem(target);
+        showTipMessage("§9[InfiniteAuraRIP] §7>>>"+"\n§f正在攻击 §7>>>§e" + name + "\n§f攻击距离 §7>>>§d" + distance + "\n§f手中物品 §7>>>§b" + item + "\n当前血量 §7>>>§c" + health);
     }
 }
 
