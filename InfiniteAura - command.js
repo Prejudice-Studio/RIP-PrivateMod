@@ -109,7 +109,7 @@ function onTickEvent() {
             var NameTag = getEntityName(target);
             var AttackSpeed = getEntityAttribute(meid, 110).current;
             var damage = getEntityAttribute(mid, 5);
-            showTipMessage("§9ＢｕｆｆｅｒＨａｘ:"+"§f正在攻击:§e" + NameTag + "§f攻击伤害:§c" + damage + "\n§f当前攻速:§b" + AttackSpeed + "当前血量:" + current);
+            showTipMessage("§9[InfiniteAuraRIP] §7>>>"+"\n§f正在攻击 §7>>>§e" + NameTag + "\n§f攻击伤害 §7>>>§d" + damage + "\n§f当前攻速 §7>>>§b" + AttackSpeed + "\n当前血量 §7>>>§c" + current);
         }
     }
 }
@@ -189,6 +189,50 @@ function onExecuteCommandEvent(command) {
             return;
     }
     return true;
+}
+
+// 配置界面
+function InfiniteAuraSetting() {
+    const custom_form = `
+    {
+    "type": "custom_form",
+    "title": "配置界面",
+    "content": [
+      {
+        "type": "input",
+        "text": "攻击次数",
+        "placeholder": "默认为3"
+      },
+      {
+        "type": "input",
+        "text": "最大攻击距离",
+        "placeholder": "默认为500"
+      },
+      {
+        "type": "input",
+        "text": "自动攻击间隔(单位tick)",
+        "placeholder": "默认为15"
+      },
+      {
+        "type": "input",
+        "text": "Pos模式最高Y坐标",
+        "placeholder": "默认为83"
+      }
+    ]
+    }
+    `;
+    addForm(custom_form, function (...args) {
+        executeCommand("/Set ATTACK_COUNT" + args[0]),executeCommand("/Set MAX_RANGE " + args[1]),executeCommand("/Set AUTO_INTERVAL " + args[2]),executeCommand("/Set POS_Y_MAX " + args[3])
+        clientMessage("攻击次数为" + args[0] , "最大攻击距离为" + args[1] , "自动攻击间隔为" + args[2] , "Pos模式最高Y坐标为" + args[3] ,  "设置完毕")
+    })
+}
+
+function onSendChatMessageEvent(message) {
+    if (message.toLowerCase() === 'set') {
+        InfiniteAuraSetting();
+        return true;  // 阻止消息继续传递
+    }  else 
+        return false;  // 允许消息传递
 }
 
 clientMessage('§lRunAway > Load InfiniteAuraRIP §b✔');
