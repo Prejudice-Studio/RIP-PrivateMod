@@ -43,7 +43,16 @@
         },
         {
             "type": "TextView",
-            "name": "UI原作者：MoYuanCN\n协作者：LunarHax",
+            "html": "UI原作者：<a href=''>MoYuanCN</a>",
+            "url": "https://github.com/MoYuanCN/",
+            "color": "#BC8F8F",
+            "size": 12,
+            "padding": [5, 5, 5, 5]
+        },
+        {
+            "type": "TextView",
+            "html": "协作者：<a href=''>LunarHax</a>",
+            "url": "http://wpa.qq.com/msgrd?v=3&uin=3588843609&site=qq&menu=yes",
             "color": "#BC8F8F",
             "size": 12,
             "padding": [5, 5, 5, 5]
