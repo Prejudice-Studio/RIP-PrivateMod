@@ -11,6 +11,20 @@
     "items": [
         {
             "type": "TextView",
+            "name": "项目地址\ngithub.com/MoYuanCN/RIP-PrivateMod/",
+            "color": "#3D3D3D",
+            "size": 12,
+            "padding": [5, 5, 5, 5],
+        },
+        {
+            "type": "TextView",
+            "name": "UI原作者：MoYuanCN",
+            "color": "#3D3D3D",
+            "size": 12,
+            "padding": [5, 5, 5, 5],
+        },
+        {
+            "type": "TextView",
             "name": "加载InfiniteAura",
             "color": "#3D3D3D",
             "size": 12,
