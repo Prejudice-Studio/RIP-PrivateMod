@@ -45,3 +45,6 @@ RIP PrivateMod
 在Js中将UI原作者与项目地址标注，上传了InfiniteAuraRIP二次创作流程
 修改了InfiniteAuraRIP.json，标注了UI原作者与项目地址，修改配置界面的运行方式
 增加了特别感谢名单，修改了DisablerTip.js
+
+2023.12.3 23:02
+修复了UI的已知问题，增加一名仓库维护者
