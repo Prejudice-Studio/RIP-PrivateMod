@@ -123,11 +123,11 @@ function onExecuteCommandEvent(command) {
             break;
             case'/信息开'
     features.显示信息 = true;
-    clientMessage('§l§d「ＢｕｆｆｅｒＨａx」§r§8>>>§r§e 信息显示 §a已启用');
+    clientMessage('§l§d[InfiniteAuraRIP]§r§8>>>§r§e 信息显示 §a已启用');
               break;
         case'/信息关'
     features.显示信息 = false;
-    clientMessage('§l§d「ＢｕｆｆｅｒＨａｘ」§r§8>>>§r§e 信息显示 §c已禁用');
+    clientMessage('§l§d[InfiniteAuraRIP]§r§8>>>§r§e 信息显示 §c已禁用');
         break;
         case '/InfiniteAura Set_Y_MAX':
             let pos = getEntityPos(LOCAL_PLAYER_ID);
