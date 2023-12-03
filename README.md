@@ -36,3 +36,6 @@ RIP PrivateMod
 
 2023.12.3 15:13
 更新了InfiniteAura - command.js
+
+2023.12.3 16:35
+更新了开源协议
