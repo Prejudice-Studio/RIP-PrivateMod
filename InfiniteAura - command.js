@@ -169,4 +169,3 @@ function onExecuteCommandEvent(command) {
 }
 
 clientMessage('§lRunAway > Load InfiniteAura §b✔');
-clientMessage('§d§lAd: §r§l购买NekoPara(原NativeHax) + 群聊692947891');
