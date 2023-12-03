@@ -33,7 +33,7 @@
             "padding": [5, 5, 5, 5],
             "run_command": "/InfiniteAura Attack",
             "shortcut": {
-                "type": "CheckedButton",
+                "type": "ClickButton",
                 "params": [65, 65],
                 "no_circle": true,
                 "run_command": "/InfiniteAura Attack",
