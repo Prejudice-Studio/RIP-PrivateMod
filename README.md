@@ -63,3 +63,6 @@ InfiniteAura - command.js - 中加入了攻击显示并修改了己知的问题
 
 2023.12.4 4:47
 修改UI颜色以便于与PrivateMod区分，增加UI内快捷加群与项目直达链接
+
+2023.12.4 5:07
+在UI内增加了两位维护者的主页直达链接，更新了InfiniteAuraRIP.png，修复已知问题
