@@ -1,4 +1,4 @@
-请将后缀名为.js的文件放入/storage/emulated/0/Android/data/com.netease.x19/files/resources/script中，其余js文件已在重构中被抛弃
+请将后缀名为.js的文件放入/storage/emulated/0/Android/data/com.netease.x19/files/resources/script中
 
 将InfiniteAuraRIP.json放入/storage/emulated/0/Android/data/com.netease.x19/files/resources/ui/
 
