@@ -33,3 +33,6 @@ RIP PrivateMod
 
 2023.12.3 13:58
 修复悬浮窗快捷键无效问题，修复其他已知问题
+
+2023.12.3 15:13
+更新了InfiniteAura - command.js
