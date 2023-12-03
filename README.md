@@ -8,7 +8,8 @@ RIP PrivateMod
 修复了模式切换的问题
 
 2023.12.2 18:48
-增加了 Disabler 功能，修复了AutoMode(AutoTP)的已知问题
+增加了 Disabler 功能
+修复了AutoMode(AutoTP)的已知问题
 
 2023.12.2 19:29
 增加了 InfiniteAura开关 与 Disabler 的悬浮窗
@@ -20,7 +21,8 @@ RIP PrivateMod
 重构完成，使用 run_command 替代了 load_script ，加快了加载速度，缩小了体积
 
 2023.12.2 21:15
-修复悬浮窗无效问题及其他已知问题，更换了InfiniteAura悬浮窗图片文件
+修复悬浮窗无效问题及其他已知问题
+更换了InfiniteAura悬浮窗图片文件
 
 2023.12.2 22:41
 创建了开源InfiniteAura交流群
@@ -32,7 +34,8 @@ RIP PrivateMod
 新增 智能队友依赖项 ，以修复智能队友无效问题
 
 2023.12.3 13:58
-修复悬浮窗快捷键无效问题，修复其他已知问题
+修复悬浮窗快捷键无效问题
+修复其他已知问题
 
 2023.12.3 15:13
 更新了InfiniteAura - command.js
@@ -42,27 +45,38 @@ RIP PrivateMod
 
 2023.12.3 21:56
 将setting.js集成进InfiniteAura - command.js
-在Js中将UI原作者与项目地址标注，上传了InfiniteAuraRIP二次创作流程
+在Js中将UI原作者与项目地址标注
+上传了InfiniteAuraRIP二次创作流程
 修改了InfiniteAuraRIP.json，标注了UI原作者与项目地址，修改配置界面的运行方式
-增加了特别感谢名单，修改了DisablerTip.js
+增加了特别感谢名单
+修改了DisablerTip.js
 
 2023.12.3 23:02
-修复了UI的已知问题，增加一名仓库维护者
+修复了UI的已知问题
+增加一名仓库维护者
 
 2023.12.3 23:10
-InfiniteAura - command.js - 中加入了信息显示，修复己知的问题
+InfiniteAura - command.js - 中加入了信息显示
+修复己知的问题
 
 2023.12.4 00:05
-修改了InfiniteAuraRIP.json，加入信息显示开关，修复已知问题
+修改了InfiniteAuraRIP.json
+加入信息显示开关
+修复已知问题
 
 2023.12.4 1:43
-修复了己知优化了InfiniteAura - command.js并把setting.js和InfiniteAura - command.js合并到了InfiniteAura - command.js里
+修复了己知问题
+优化了InfiniteAura - command.js
+将setting.js合并至InfiniteAura - command.js
 
 2023.12.4 2:06
 多次尝试修复信息显示，无果，仍在尝试
 
 2023.12.4 4:47
-修改UI颜色以便于与PrivateMod区分，增加UI内快捷加群与项目直达链接
+修改UI颜色以便于与PrivateMod区分
+增加UI内快捷加群与项目直达链接
 
 2023.12.4 5:07
-在UI内增加了两位维护者的主页直达链接，更新了InfiniteAuraRIP.png，修复已知问题
+在UI内增加了两位维护者的主页直达链接
+更新了InfiniteAuraRIP.png
+修复已知问题
