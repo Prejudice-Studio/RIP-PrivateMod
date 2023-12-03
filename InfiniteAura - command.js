@@ -13,9 +13,7 @@ let target = null; //攻击目标唯一数字ID
 let attackCount = 0; //剩余攻击次数
 let mode = true; //控制传送模式，默认Pos
 let tick = 0;
-let features = { // 功能开关
-  显示信息: true // 设置默认值为 true（开启）
-}
+let 显示信息 = true // 设置默认值为 true（开启）
 
 const setPos = p => setEntityPos(LOCAL_PLAYER_ID, p.x, p.y, p.z);
 const setMotion = m => setEntityMotion(LOCAL_PLAYER_ID, m.x, m.y, m.z);
@@ -99,7 +97,7 @@ function onTickEvent() {
     }
 }
 
-if (features.显示信息 && target_list.length > 0)  {
+if (显示信息 && target_list.length > 0)  {
         var health = getEntityAttribute(target, 4);
         var distance = get_distance_id(self_id, target);
         var name = getEntityName(target);
