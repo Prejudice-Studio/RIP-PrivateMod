@@ -14,6 +14,9 @@ let target = null; //攻击目标唯一数字ID
 let attackCount = 0; //剩余攻击次数
 let mode = true; //控制传送模式,默认Pos
 let tick = 0;
+let features = { // 功能开关
+  显示信息: true // 设置默认值为 true（开启）
+}
 
 //一些代码的封装
 const setPos = p => setEntityPos(LOCAL_PLAYER_ID, p.x, p.y, p.z);
@@ -98,6 +101,18 @@ function onTickEvent() {
         }
     }
 }
+    if (features.显示信息) { // 若有开启显示信息，则显示实体信息
+        if (typeof target === "string" && target !== null && tab(getEntityPos(mid), getEntityPos(target)) <= range)) {
+            var health = getEntityAttribute(mid, 4);
+            var current = health.current;
+            var max = health.max;
+            var NameTag = getEntityName(target);
+            var AttackSpeed = getEntityAttribute(meid, 110).current;
+            var damage = getEntityAttribute(mid, 5);
+            showTipMessage("§9ＢｕｆｆｅｒＨａｘ:"+"§f正在攻击:§e" + NameTag + "§f攻击伤害:§c" + damage + "\n§f当前攻速:§b" + AttackSpeed + "当前血量:" + current);
+        }
+    }
+}
 
 function onExecuteCommandEvent(command) {
     switch (command) {
@@ -106,6 +121,14 @@ function onExecuteCommandEvent(command) {
             while (attackCount--) back();
             exit();
             break;
+            case'/信息开'
+    features.显示信息 = true;
+    clientMessage('§l§d「ＢｕｆｆｅｒＨａx」§r§8>>>§r§e 信息显示 §a已启用');
+              break;
+        case'/信息关'
+    features.显示信息 = false;
+    clientMessage('§l§d「ＢｕｆｆｅｒＨａｘ」§r§8>>>§r§e 信息显示 §c已禁用');
+        break;
         case '/InfiniteAura Set_Y_MAX':
             let pos = getEntityPos(LOCAL_PLAYER_ID);
             let Y = Math.ceil(pos.y) - 1;
@@ -166,50 +189,6 @@ function onExecuteCommandEvent(command) {
             return;
     }
     return true;
-}
-
-// 配置界面
-function InfiniteAuraSetting() {
-    const custom_form = `
-    {
-    "type": "custom_form",
-    "title": "配置界面",
-    "content": [
-      {
-        "type": "input",
-        "text": "攻击次数",
-        "placeholder": "默认为3"
-      },
-      {
-        "type": "input",
-        "text": "最大攻击距离",
-        "placeholder": "默认为500"
-      },
-      {
-        "type": "input",
-        "text": "自动攻击间隔(单位tick)",
-        "placeholder": "默认为15"
-      },
-      {
-        "type": "input",
-        "text": "Pos模式最高Y坐标",
-        "placeholder": "默认为83"
-      }
-    ]
-    }
-    `;
-    addForm(custom_form, function (...args) {
-        executeCommand("/Set ATTACK_COUNT" + args[0]),executeCommand("/Set MAX_RANGE " + args[1]),executeCommand("/Set AUTO_INTERVAL " + args[2]),executeCommand("/Set POS_Y_MAX " + args[3])
-        clientMessage("攻击次数为" + args[0] , "最大攻击距离为" + args[1] , "自动攻击间隔为" + args[2] , "Pos模式最高Y坐标为" + args[3] ,  "设置完毕")
-    })
-}
-
-function onSendChatMessageEvent(message) {
-    if (message.toLowerCase() === 'set') {
-        InfiniteAuraSetting();
-        return true;  // 阻止消息继续传递
-    }  else 
-        return false;  // 允许消息传递
 }
 
 clientMessage('§lRunAway > Load InfiniteAuraRIP §b✔');
