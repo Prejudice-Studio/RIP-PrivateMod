@@ -51,3 +51,6 @@ RIP PrivateMod
 
 2023.12.3 23:10
 InfiniteAura - command.js中加入了攻击显示并修改了己知的问题
+
+2023.12.4 00:05
+修改了InfiniteAuraRIP.json，加入信息显示开关，修复已知问题
