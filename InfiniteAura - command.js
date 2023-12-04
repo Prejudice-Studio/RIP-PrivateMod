@@ -12,6 +12,7 @@ let backMotion = null; //自动返回所记录的移动值
 let target = null; //攻击目标唯一数字ID
 let attackCount = 0; //剩余攻击次数
 let mode = true; //控制传送模式，默认Pos
+let tpHide = true; //控制传送信息显示，默认为true
 let tick = 0;
 let features = { // 功能开关
   显示信息: true // 设置默认值为 true（开启）
@@ -46,7 +47,7 @@ function attack() {
         backPos = localPlayerPos; //记录坐标
         backMotion = getMotion(); //记录移动值
         teleport(); //传送至目标
-    } else clientMessage('§lRunAway >> §rInfiniteAuraRIP : §bNo Target');
+    } else clientMessage('§lRunAway >> §rInfiniteAuraRIP : §b没有合适的目标');
 }
 
 function teleport() { //计算偏移并且通过移动值传送到目标位置
@@ -76,7 +77,9 @@ function onTickEvent() {
     } else tick = 0;
     if (backPos) {
         if (mode) {
-            executeCommand("/ww tp " + backPos.x + " " + backPos.y + " " + backPos.z);
+            if (tpHide) {
+                executeCommand("/ww tp " + backPos.x + " " + backPos.y + " " + backPos.z)
+            };
             click(backPos);
             attackEntity(target, true);
         } else {
@@ -118,13 +121,22 @@ function onExecuteCommandEvent(command) {
             while (attackCount--) back();
             exit();
             break;
+        case '/ShowTp':
+            tpHide = true;
+            clientMessage('§l§d[InfiniteAuraRIP]§r§8>>>§r§e 传送信息显示 §a已启用');
+            break;
+        case '/HideTp':
+            tpHide = false;
+            clientMessage('§l§d[InfiniteAuraRIP]§r§8>>>§r§e 传送信息显示 §c已禁用');
+            break;
+
         case '/信息开':
             features.显示信息 = true;
-            clientMessage('§l§d[InfiniteAuraRIP]§r§8>>>§r§e 信息显示 §a已启用');
+            clientMessage('§l§d[InfiniteAuraRIP]§r§8>>>§r§e 基本信息显示 §a已启用');
             break;
         case '/信息关':
             features.显示信息 = false;
-            clientMessage('§l§d[InfiniteAuraRIP]§r§8>>>§r§e 信息显示 §c已禁用');
+            clientMessage('§l§d[InfiniteAuraRIP]§r§8>>>§r§e 基本信息显示 §c已禁用');
             break;
         case '/InfiniteAura Set_Y_MAX':
             let pos = getEntityPos(LOCAL_PLAYER_ID);
