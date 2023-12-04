@@ -80,3 +80,7 @@ InfiniteAura - command.js - 中加入了信息显示
 在UI内增加了两位维护者的主页直达链接
 更新了InfiniteAuraRIP.png
 修复已知问题
+
+2023.12.4 14:26
+修改InfiniteAura - command.js内的文本描述问题
+将InfiniteAura - command.js内的无用代码注释掉以避免不必要的问题
