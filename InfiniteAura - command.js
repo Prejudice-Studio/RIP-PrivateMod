@@ -99,7 +99,7 @@ function onTickEvent() {
     }
 }
 
-if (features.显示信息) {
+/*if (features.显示信息) {
     if (typeof target === "string" && target !== null && tab(getEntityPos(mid), getEntityPos(target)) <= range) {
         var health = getEntityAttribute(mid, 4);
         var current = health.current;
@@ -109,7 +109,7 @@ if (features.显示信息) {
         var damage = getEntityAttribute(mid, 5);
         showTipMessage("§9[InfiniteAuraRIP] §7>>>"+"\n§f正在攻击 §7>>>§e" + NameTag + "\n§f攻击伤害 §7>>>§d" + damage + "\n§f当前攻速 §7>>>§b" + AttackSpeed + "\n当前血量 §7>>>§c" + current);
     }
-}
+}*/
 
 function onExecuteCommandEvent(command) {
     switch (command) {
@@ -212,7 +212,7 @@ function InfiniteAuraSetting() {
       },
       {
         "type": "input",
-        "text": "Pos模式最高Y坐标",
+        "text": "最高Y坐标",
         "placeholder": "默认为83"
       }
     ]
@@ -220,7 +220,7 @@ function InfiniteAuraSetting() {
     `;
     addForm(custom_form, function (...args) {
         executeCommand("/Set ATTACK_COUNT " + args[0]), executeCommand("/Set MAX_RANGE " + args[1]), executeCommand("/Set AUTO_INTERVAL " + args[2]), executeCommand("/Set POS_Y_MAX " + args[3]);
-        clientMessage("攻击次数为" + args[0], "最大攻击距离为" + args[1], "自动攻击间隔为" + args[2], "Pos模式最高Y坐标为" + args[3], "设置完毕");
+        clientMessage("攻击次数为" + args[0], "最大攻击距离为" + args[1], "自动攻击间隔为" + args[2], "最高Y坐标为" + args[3], "设置完毕");
     });
 }
 
