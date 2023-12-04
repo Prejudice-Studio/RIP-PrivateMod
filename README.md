@@ -94,3 +94,7 @@ InfiniteAura - command.js - 中加入了信息显示
 更新了传送信息显示开关
 调整 Disabler 在InfiniteAuraRIP.json中的顺序
 修复已知问题
+
+2023.12.5 1:50
+重写信息显示休复无法使用问题
+修复己知问题
