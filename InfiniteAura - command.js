@@ -46,7 +46,7 @@ function attack() {
         backPos = localPlayerPos; //记录坐标
         backMotion = getMotion(); //记录移动值
         teleport(); //传送至目标
-    } else clientMessage('§lRunAway >> §rInfiniteAuraRIP : §b没有合适的目标');
+    } else clientMessage('§lRunAway >> §rInfiniteAuraRIP : §bNo Target');
 }
 
 function teleport() { //计算偏移并且通过移动值传送到目标位置
