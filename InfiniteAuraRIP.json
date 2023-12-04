@@ -85,7 +85,7 @@
                 "params": [65, 65],
                 "no_circle": true,
                 "run_command": "/InfiniteAura Attack",
-                "icon": "InfiniteAuraRIP.png"
+                "icon": "InfiniteAura.png"
             }
         },
         {
