@@ -84,3 +84,7 @@ InfiniteAura - command.js - 中加入了信息显示
 2023.12.4 14:26
 修改InfiniteAura - command.js内的文本描述问题
 将InfiniteAura - command.js内的无用代码注释掉以避免不必要的问题
+
+2023.12.4 16:12
+修复材质透明度问题
+更新此版本的玩家请删除InfiniteAuraRIP.png，使用InfiniteAura.png，并使用新的InfiniteAuraRIP.json
