@@ -88,3 +88,8 @@ InfiniteAura - command.js - 中加入了信息显示
 2023.12.4 16:12
 修复材质透明度问题
 更新此版本的玩家请删除InfiniteAuraRIP.png，使用InfiniteAura.png，并使用新的InfiniteAuraRIP.json
+
+2023.12.4 22:48
+更新了传送信息显示开关
+调整 Disabler 在InfiniteAuraRIP.json中的顺序
+修复已知问题
