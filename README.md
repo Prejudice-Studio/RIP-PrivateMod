@@ -1,6 +1,6 @@
 # RIP-PrivateMod
 RIP PrivateMod
-Js原作者：追风
+Js原作者：追风，软潼，年，J，海螺，大人物，小人物，败北
 
 2023.12.2 16:39
 更新了UI
