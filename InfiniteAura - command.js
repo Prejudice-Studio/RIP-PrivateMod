@@ -245,7 +245,7 @@ function onSendChatMessageEvent(message) {
 }
 
 clientMessage('§lRunAway > Load InfiniteAuraRIP §b✔');
-clientMessage('§r§l Js原作者：追风');
+clientMessage('§r§l Js原作者：追风，软潼，年，J，海螺，大人物，小人物，败北');
 clientMessage('§r§l 开源InfiniteAura(InfiniteAuraRIP) + 群聊756434157');
 clientMessage('§r§l UI原作者：github.com/MoYuanCN QQ：1520349207 Email:MoYuanCN@gmail.com\n          LunarHax QQ：3588843609 Email：LunarHaxUI@outlook.com');
 clientMessage('§r§l 项目地址：https://github.com/MoYuanCN/RIP-PrivateMod/');
