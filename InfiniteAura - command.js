@@ -14,9 +14,7 @@ let attackCount = 0; //剩余攻击次数
 let mode = true; //控制传送模式，默认Pos
 let tpHide = true; //控制传送信息显示，默认为true
 let tick = 0;
-let features = { // 功能开关
-  显示信息: true // 设置默认值为 true（开启）
-}
+var 信息显示 = true//初始为true加载即显示
 
 const setPos = p => setEntityPos(LOCAL_PLAYER_ID, p.x, p.y, p.z);
 const setMotion = m => setEntityMotion(LOCAL_PLAYER_ID, m.x, m.y, m.z);
@@ -102,17 +100,18 @@ function onTickEvent() {
     }
 }
 
-/*if (features.显示信息) {
-    if (typeof target === "string" && target !== null && tab(getEntityPos(mid), getEntityPos(target)) <= range) {
-        var health = getEntityAttribute(mid, 4);
-        var current = health.current;
-        var max = health.max;
-        var NameTag = getEntityName(target);
-        var AttackSpeed = getEntityAttribute(meid, 110).current;
-        var damage = getEntityAttribute(mid, 5);
-        showTipMessage("§9[InfiniteAuraRIP] §7>>>"+"\n§f正在攻击 §7>>>§e" + NameTag + "\n§f攻击伤害 §7>>>§d" + damage + "\n§f当前攻速 §7>>>§b" + AttackSpeed + "\n当前血量 §7>>>§c" + current);
-    }
-}*/
+        if (信息显示) {
+            if ((target == null && typeof target == "string") || tab(getEntityPos(mid), getEntityPos(target)) > range) {
+                var health = getEntityAttribute(mid, 4)//被攻击玩家生命[未启用]
+                var current = health.current//玩家现存生命
+                var max = health.max//玩家最大生命值
+                var item = getEntityCarriedItem(mid)//玩家手中物品
+                var damage = getEntityAttribute(mid, 5)//玩家攻击伤害
+                var NameTag = getEntityName(target)//被攻击玩家名称
+                showTipMessage("§9[InfiniteAuraRIP] §7>>>"+"\n§f手持物品 §7>>>§b" + item.name + "§fx§o" + item.count + "\n§f正在攻击 §7>>>§e" + NameTag +"\n§f自身血量 §7>>>§c" + current + "/" + max + "\n§f攻击伤害 §7>>>§d" + sword(mid))
+
+            }
+        }
 
 function onExecuteCommandEvent(command) {
     switch (command) {
