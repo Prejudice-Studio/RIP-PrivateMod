@@ -100,7 +100,7 @@ function onTickEvent() {
     }
 }
 
-        if (信息显示) {
+       /* if (信息显示) {
             if ((target == null && typeof target == "string") || tab(getEntityPos(mid), getEntityPos(target)) > range) {
                 var health = getEntityAttribute(mid, 4)//被攻击玩家生命[未启用]
                 var current = health.current//玩家现存生命
@@ -111,7 +111,7 @@ function onTickEvent() {
                 showTipMessage("§9[InfiniteAuraRIP] §7>>>"+"\n§f手持物品 §7>>>§b" + item.name + "§fx§o" + item.count + "\n§f正在攻击 §7>>>§e" + NameTag +"\n§f自身血量 §7>>>§c" + current + "/" + max + "\n§f攻击伤害 §7>>>§d" + sword(mid))
 
             }
-        }
+        } */
 
 function onExecuteCommandEvent(command) {
     switch (command) {
