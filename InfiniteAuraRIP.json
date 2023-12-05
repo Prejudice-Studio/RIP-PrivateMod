@@ -1,6 +1,5 @@
 //InfiniteAuraRIP
 //开源项目地址： https://github.com/MoYuanCN/RIP-PrivateMod/
-//Js原作者：追风，软潼，年，J，海螺，大人物，小人物，败北
 //UI作者：MoYuanCN   QQ：1520349207    & LunarHax   QQ：3588843609
 //本开源项目使用LGPL 3.0协议
 //允许进行二次创作并分发，但是分发内容必须遵循上述开源协议与InfiniteAuraRIP二次创作流程
@@ -68,7 +67,15 @@
         },
         {
             "type": "TextView",
-            "name": "打开配置界面\n请确保已加载Js",
+            "name": "加载Bhop",
+            "color": "#BC8F8F",
+            "size": 12,
+            "padding": [5, 5, 5, 5],
+            "load_script": "bhop.js"
+        },
+        {
+            "type": "TextView",
+            "name": "打开配置界面\n请确保已加载InfiniteAura Js",
             "color": "#BC8F8F",
             "size": 12,
             "padding": [5, 5, 5, 5],
@@ -123,23 +130,15 @@
         },
         {
             "type": "TextView",
-            "name": "开启传送信息显示",
+            "name": "切换传送信息显示状态",
             "color": "#BC8F8F",
             "size": 12,
             "padding": [5, 5, 5, 5],
-            "run_command": "/ShowTp"
+            "run_command": "/TpState"
         },
         {
             "type": "TextView",
-            "name": "关闭传送信息显示",
-            "color": "#BC8F8F",
-            "size": 12,
-            "padding": [5, 5, 5, 5],
-            "run_command": "/HideTp"
-        },
-        {
-            "type": "TextView",
-            "name": "开启基本信息显示",
+            "name": "开启玩家信息显示",
             "color": "#BC8F8F",
             "size": 12,
             "padding": [5, 5, 5, 5],
@@ -147,7 +146,7 @@
         },
         {
             "type": "TextView",
-            "name": "关闭基本信息显示",
+            "name": "关闭玩家信息显示",
             "color": "#BC8F8F",
             "size": 12,
             "padding": [5, 5, 5, 5],
@@ -168,6 +167,21 @@
             "size": 12,
             "padding": [5, 5, 5, 5],
             "run_command": "/InfiniteAura Set_Y_MAX"
+        },
+        {
+            "type": "TextView",
+            "name": "切换Bhop状态",
+            "color": "#BC8F8F",
+            "size": 12,
+            "padding": [5, 5, 5, 5],
+            "run_command": "/bhop",
+            "shortcut": {
+                "type": "ClickButton",
+                "params": [65, 65],
+                "no_circle": true,
+                "run_command": "/bhop",
+                "icon": "bhop.png"
+            }
         },
         {
             "type": "TextView",
