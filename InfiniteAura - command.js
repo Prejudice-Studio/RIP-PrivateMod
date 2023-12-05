@@ -100,19 +100,6 @@ function onTickEvent() {
     }
 }
 
-       /* if (信息显示) {
-            if ((target == null && typeof target == "string") || tab(getEntityPos(mid), getEntityPos(target)) > range) {
-                var health = getEntityAttribute(mid, 4)//被攻击玩家生命[未启用]
-                var current = health.current//玩家现存生命
-                var max = health.max//玩家最大生命值
-                var item = getEntityCarriedItem(mid)//玩家手中物品
-                var damage = getEntityAttribute(mid, 5)//玩家攻击伤害
-                var NameTag = getEntityName(target)//被攻击玩家名称
-                showTipMessage("§9[InfiniteAuraRIP] §7>>>"+"\n§f手持物品 §7>>>§b" + item.name + "§fx§o" + item.count + "\n§f正在攻击 §7>>>§e" + NameTag +"\n§f自身血量 §7>>>§c" + current + "/" + max + "\n§f攻击伤害 §7>>>§d" + sword(mid))
-
-            }
-        } */
-
 function onExecuteCommandEvent(command) {
     switch (command) {
         case '/InfiniteAura exit':
