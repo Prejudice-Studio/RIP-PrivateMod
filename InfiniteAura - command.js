@@ -1,4 +1,5 @@
 const LOCAL_PLAYER_ID = getLocalPlayerUniqueID(); //自身ID
+
 let POS_Y_MAX = 83; //最高Y坐标
 let MAX_RANGE = 500; //最远范围
 let ATTACK_COUNT = 3; //攻击和点击次数
@@ -6,7 +7,7 @@ let AUTO_INTERVAL = 15; //自动传送间隔
 
 let AutoMode = false; //自动手动切换，默认为手动
 let Team = false; //智能队友开关，默认关闭
-let autotp = false; //是否自动tp，默认为不
+var autotp = false; //是否自动tp，默认为不
 let backPos = null; //自动返回记录的坐标
 let backMotion = null; //自动返回所记录的移动值
 let target = null; //攻击目标唯一数字ID
@@ -14,7 +15,6 @@ let attackCount = 0; //剩余攻击次数
 let mode = true; //控制传送模式，默认Pos
 let tpHide = true; //控制传送信息显示，默认为true
 let tick = 0;
-var 信息显示 = true//初始为true加载即显示
 
 const setPos = p => setEntityPos(LOCAL_PLAYER_ID, p.x, p.y, p.z);
 const setMotion = m => setEntityMotion(LOCAL_PLAYER_ID, m.x, m.y, m.z);
@@ -66,6 +66,17 @@ function teleport() { //计算偏移并且通过移动值传送到目标位置
     }
 }
 
+
+function onPlayerAttackEvent(meid,target) {
+    var health = getEntityAttribute(target,4)
+    var current = health.current
+    var max = health.max
+    var item = getEntityCarriedItem(target)
+    var damage = getEntityAttribute(target,5)
+    var Attack=damage.current
+    showTipMessage("§9[InfiniteAuraRIP] §7>>>"+"\n§f当前血量 §7>>>§c"+current+"§f/§4"+max+"\n§f当前物品 §7>>>§e"+item.name+"\n§f攻击伤害 §7>>>§d"+Attack)
+        }
+
 function onTickEvent() {
     if (autotp && AutoMode) {
         if (!tick--) {
@@ -107,22 +118,12 @@ function onExecuteCommandEvent(command) {
             while (attackCount--) back();
             exit();
             break;
-        case '/ShowTp':
-            tpHide = true;
-            clientMessage('§l§d[InfiniteAuraRIP]§r§8>>>§r§e 传送信息显示 §a已启用');
-            break;
-        case '/HideTp':
-            tpHide = false;
-            clientMessage('§l§d[InfiniteAuraRIP]§r§8>>>§r§e 传送信息显示 §c已禁用');
-            break;
-
-        case '/信息开':
-            显示信息 = true;
-            clientMessage('§l§d[InfiniteAuraRIP]§r§8>>>§r§e 基本信息显示 §a已启用');
-            break;
-        case '/信息关':
-            显示信息 = false;
-            clientMessage('§l§d[InfiniteAuraRIP]§r§8>>>§r§e 基本信息显示 §c已禁用');
+        case '/TpState':
+            tpHide = !tpHide;
+            if (tpHide) {
+                clientMessage('§l§d[InfiniteAuraRIP]§r§8>>>§r§e 传送信息显示 §c 已禁用')
+                } else
+                clientMessage('§l§d[InfiniteAuraRIP]§r§8>>>§r§e 传送信息显示 §a 已启用');
             break;
         case '/InfiniteAura Set_Y_MAX':
             let pos = getEntityPos(LOCAL_PLAYER_ID);
@@ -231,8 +232,9 @@ function onSendChatMessageEvent(message) {
 }
 
 clientMessage('§lRunAway > Load InfiniteAuraRIP §b✔');
-clientMessage('§r§l Js原作者：追风，软潼，年，J，海螺，大人物，小人物，败北');
-clientMessage('§r§l 开源InfiniteAura(InfiniteAuraRIP) + 群聊756434157');
-clientMessage('§r§l UI原作者：github.com/MoYuanCN QQ：1520349207 Email:MoYuanCN@gmail.com\n          LunarHax QQ：3588843609 Email：LunarHaxUI@outlook.com');
-clientMessage('§r§l 项目地址：https://github.com/MoYuanCN/RIP-PrivateMod/');
-clientMessage('§r§l 特别感谢:\nXxxGBRCxxX QQ：2938846249\n烟域 QQ：3595643051\n落日终归山海 QQ：2981864058\nAoux QQ：3511283331\nEcho QQ：1546348649\nCoe QQ：532998493\n墨影 QQ：3658044685');
+clientMessage('§r§l开源InfiniteAura(InfiniteAuraRIP) + 群聊756434157');
+clientMessage('§r§lUI原作者：github.com/MoYuanCN QQ：1520349207 Email:MoYuanCN@gmail.com\n          LunarHax QQ：3588843609 Email：LunarHaxUI@outlook.com');
+clientMessage('§r§l项目地址：https://github.com/MoYuanCN/RIP-PrivateMod/');
+clientMessage('§r§l特别感谢:\nXxxGBRCxxX QQ：2938846249\n烟域 QQ：3595643051\n落日终归山海 QQ：2981864058\nAoux QQ：3511283331\nEcho QQ：1546348649\nCoe QQ：532998493\n墨影 QQ：3658044685');
+loadScript("bhop.js");
+clientMessage("基本信息显示仅在攻击时生效");
