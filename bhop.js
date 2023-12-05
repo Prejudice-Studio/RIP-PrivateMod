@@ -76,12 +76,22 @@ function onTickEvent() {
 function onExecuteCommandEvent(message) { // 执行命令
     if (message == '/bhop exit') { // 退出脚本
         switch_ = false;
-        clientMessage('§l§d [InfiniteAuraRIP] §ebhop Disabled');
+        clientMessage('§l§d[InfiniteAuraRIP] §ebhop Disabled');
         return true;
     } else if (message == '/bhop') { //切换Bhop状态
         switch_ = !switch_;
-        clientMessage('§l§d [InfiniteAuraRIP] §ebhop:状态已切换');
+        if (switch_) {
+            clientMessage('§l§d[InfiniteAuraRIP]§r§8>>>§r§e Bhop §a 已启用')
+            } else
+        clientMessage('§l§d[InfiniteAuraRIP]§r§8>>>§r§e Bhop §c 已禁用');
         return true;
+    }
+}
+
+function onCallModuleEvent(args) { // 调用模块时执行
+    if (args.fun === 'fun_move_jump') { // 切换Bhop状态
+        switch_ = !switch_;
+        clientMessage('§l§d [InfiniteAura] §ebhop: ' + switch_);
     }
 }
 
