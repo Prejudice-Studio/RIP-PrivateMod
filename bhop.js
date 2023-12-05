@@ -10,7 +10,6 @@ const SPEED = 0.95; //移动速度
 
 /*
   除SPEED和JUMP_STRENGTH之外任何常量不应该被改动
-  指令/bhop switch开关,/bhop exit退出
 */
 
 const setPos = p => setEntityPos(LOCAL_PLAYER_ID, p.x, p.y, p.z); //设置实体坐标函数
