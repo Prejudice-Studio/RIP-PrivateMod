@@ -138,19 +138,11 @@
         },
         {
             "type": "TextView",
-            "name": "开启玩家信息显示",
+            "name": "切换玩家信息显示状态",
             "color": "#BC8F8F",
             "size": 12,
             "padding": [5, 5, 5, 5],
-            "run_command": "/信息开"
-        },
-        {
-            "type": "TextView",
-            "name": "关闭玩家信息显示",
-            "color": "#BC8F8F",
-            "size": 12,
-            "padding": [5, 5, 5, 5],
-            "run_command": "/信息关"
+            "run_command": "/info"
         },
         {
             "type": "TextView",
