@@ -67,14 +67,6 @@
         },
         {
             "type": "TextView",
-            "name": "加载Bhop",
-            "color": "#BC8F8F",
-            "size": 12,
-            "padding": [5, 5, 5, 5],
-            "load_script": "bhop.js"
-        },
-        {
-            "type": "TextView",
             "name": "打开配置界面\n请确保已加载InfiniteAura Js",
             "color": "#BC8F8F",
             "size": 12,
