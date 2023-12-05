@@ -103,5 +103,7 @@ InfiniteAura - command.js - 中加入了信息显示
 增加了玩家信息显示(仅攻击时显示，默认开启且无法关闭)
 更新了InfiniteAuraRIP.json
 
-
+2023.12.6 2:20
+美化了玩家信息显示
+修复己知问题
 
