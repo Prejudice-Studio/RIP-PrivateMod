@@ -73,9 +73,9 @@ function onTickEvent() {
 }
 
 function onExecuteCommandEvent(message) { // 执行命令
-    if (message == '/bhop exit') { // 退出脚本
+    if (message == '/bhop退出') { // 退出脚本
         switch_ = false;
-        clientMessage('§l§d[InfiniteAuraRIP] §ebhop Disabled');
+        clientMessage('§l§d[InfiniteAuraRIP] §ebhop §c Injection has been exited');
         return true;
     } else if (message == '/bhop') { //切换Bhop状态
         switch_ = !switch_;
@@ -95,4 +95,4 @@ function onCallModuleEvent(args) { // 调用模块时执行
 }
 
 
-clientMessage('§l§d [InfiniteAuraRIP] §eBhop Load Successful!\n退出Bhop脚本请 /bhop exit'); // 脚本加载提示消息
+clientMessage('§l§d [InfiniteAuraRIP] §eBhop §аLoad Successful!\n§b退出Bhop脚本请 /bhop退出'); // 脚本加载提示消息
