@@ -6,7 +6,7 @@
 
 将后缀名为.png的悬浮窗图片文件放入/storage/emulated/0/Android/data/com.netease.x19/files/resources/textures/内
 
-在/storage/emulated/0/Android/data/com.netease.x19/files/resources/ui/中的Main.json(DianaGodUI) / ui_main.json(原版UI)中添加如下字段：
+在/storage/emulated/0/Android/data/com.netease.x19/files/resources/ui/中的Main.json(DianaGodUI) / ui_main.json(原版UI)中添加如下字段并与其他字段统一格式：
         {
             "type": "TextView",
             "name": "InfiniteAuraRIP",
