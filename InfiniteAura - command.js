@@ -121,9 +121,9 @@ function onExecuteCommandEvent(command) {
         case '/TpState':
             tpHide = !tpHide;
             if (tpHide) {
-                clientMessage('§l§d[InfiniteAuraRIP]§r§8>>>§r§e 传送信息显示 §c 已禁用')
+                clientMessage('§l§d[InfiniteAuraRIP]§r§8>>>§r§e 传送信息显示 §a 已启用')
                 } else
-                clientMessage('§l§d[InfiniteAuraRIP]§r§8>>>§r§e 传送信息显示 §a 已启用');
+                clientMessage('§l§d[InfiniteAuraRIP]§r§8>>>§r§e 传送信息显示 §c 已禁用');
             break;
         case '/InfiniteAura Set_Y_MAX':
             let pos = getEntityPos(LOCAL_PLAYER_ID);
