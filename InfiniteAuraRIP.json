@@ -98,7 +98,7 @@
         },
         {
             "type": "Switch",
-            "name": "智能队友依赖项\n请开启智能队友前打开",
+            "name": "智能队友前置",
             "color": "#BC8F8F",
             "size": 10,
             "padding": [5, 5, 5, 5],
@@ -127,14 +127,6 @@
             "size": 12,
             "padding": [5, 5, 5, 5],
             "run_command": "/TpState"
-        },
-        {
-            "type": "TextView",
-            "name": "Disabler提示",
-            "color": "#BC8F8F",
-            "size": 12,
-            "padding": [5, 5, 5, 5],
-            "load_script": "DisablerTip.js"
         },
         {
             "type": "TextView",
