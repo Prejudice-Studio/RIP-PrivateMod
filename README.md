@@ -132,4 +132,4 @@ RIP PrivateMod
 
 
 
-#Anti InfiniteAura开发ing
+#Anti InfiniteAuraJS开发中
