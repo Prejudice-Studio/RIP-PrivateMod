@@ -109,3 +109,27 @@ RIP PrivateMod
 
 2023.12.6 21:19
 #删除Disabler提示
+
+2023.12.6 23:
+#修改文本描述
+#修改信息显示逻辑
+#项目正式结束，感谢大家对InfiniteAuraRIP的理解，陪伴与支持
+#即刻起不再接受功能建议，仅接受现有功能的问题反馈
+#现有功能问题反馈请使用issues
+#InfiniteAuraRIP 开源交流群(群号:756434157)正式关闭(全员禁言)，仅接受入群申请以做InfiniteAuraRIP境内镜像下载地址
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Anti InfiniteAura开发ing
