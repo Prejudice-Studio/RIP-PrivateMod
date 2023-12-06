@@ -68,14 +68,14 @@ function teleport() { //计算偏移并且通过移动值传送到目标位置
 
 
 function onPlayerAttackEvent(meid,target) {
-        var distance = get_distance_id(self_id, target);
-        var item = getEntityCarriedItem(target);
-        var damage = getEntityAttribute(target, 5);
-        var Attack = damage.current;
-        var NameTag = getEntityName(target);
-        var speed = getEntityAttribute(self_id, 3);
-        showTipMessage("§9§l[InfiniteAuraRIP] §r§7>>> " + "\n§f当前物品 §7>>> §e" + item.name + "\n§f攻击伤害 §7>>> §d" + Attack + "\n§f正在攻击 §7>>>§e " + NameTag + "\n§f目标距离 §7>>> §c" + distance + "\n§f当前移速 §7>>>§b " + speed + "§em/s")
-}
+    var health = getEntityAttribute(target,4)
+    var current = health.current
+    var max = health.max
+    var item = getEntityCarriedItem(target)
+    var damage = getEntityAttribute(target,5)
+    var Attack=damage.current
+    showTipMessage("§9[InfiniteAuraRIP] §7>>>"+"\n§f当前血量 §7>>>§c"+current+"§f/§4"+max+"\n§f当前物品 §7>>>§e"+item.name+"\n§f攻击伤害 §7>>>§d"+Attack)
+        }
 
 function onTickEvent() {
     if (autotp && AutoMode) {
