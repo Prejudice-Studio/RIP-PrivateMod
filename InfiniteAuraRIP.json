@@ -14,7 +14,7 @@
     "color": "#FFFFFF",
     "alpha": 0.9,
     "can_close": true,
-    "hide": true,
+    "hide": false,
     "close_icon": "ic_close.png",
     "items": [
         {
