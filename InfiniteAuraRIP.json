@@ -15,24 +15,11 @@
     "alpha": 0.9,
     "can_close": true,
     "hide": false,
-    "close_icon": "ic_close.png",
     "items": [
         {
             "type": "TextView",
             "html": "<a href=''>项目地址</a>",
             "url": "https://github.com/MoYuanCN/RIP-PrivateMod/",
-            "size": 12,
-            "padding": [
-                10,
-                5,
-                10,
-                5
-            ]
-        },
-        {
-            "type": "TextView",
-            "html": "<a href=''>一键加群</a>",
-            "url": "http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=D8uXNt2y4yAdzkeJv7JULQznTwmVmBSR&authKey=B8Ln3cX5T%2B2rwn%2B62f06pRiLCa6%2FtniURTdhdbWbtXw6hAMAhUedm3igitkFMb6y&noverify=0&group_code=756434157",
             "size": 12,
             "padding": [
                 10,
