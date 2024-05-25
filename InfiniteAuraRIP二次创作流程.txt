@@ -1,7 +1,0 @@
-InfiniteAuraRIP二创流程：
-​1.进入Github.com ，注册Github账号，登录
-2.为 github.com/MoYuanCN/RIP-PrivateMod/ 点上Star
-3.对 github.com/MoYuanCN/RIP-PrivateMod/ 进行Fork操作，并为你自己的UI取名
-4.在遵循LGPL 3.0开源协议，即可进行二次创作并商用，但二次创作的产物必须开源且在明显位置标注原作者的条件下，直接在github内进行创作，或使用code:download zip将仓库内所有文件下载至本地进行二次创作并在完成后将文件上传至Github
-5.在你的Github仓库中创建README.md文件，在其中标注UI原作者，你可以选择性在其中添加你的UI的更新日志
-6.对外发布你的UI，完成
